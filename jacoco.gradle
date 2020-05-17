@@ -7,35 +7,6 @@ def coverageSourceDirs = [
         'src/debug/java'
 ]
 
-def excludes = [
-        '**/R.class',
-        '**/R$*.class',
-        '**/*$ViewInjector*.*',
-        '**/*$ViewBinder*.*',
-        '**/BuildConfig.*',
-        '**/Manifest*.*',
-        '**/*RealmProxy.*',
-        '**/*ColumnInfo.*',
-        '**/*RealmModule*.*',
-        '**/AutoValue_*.*',
-        '**/Dagger*.*',
-        '**/*Module_Provide*Factory.*',
-        '**/*_Factory.*',
-        '**/*_MembersInjector.*',
-        '**/*_LifecycleAdapter.*',
-        '**/models/**'
-]
-
-def javaClasses = fileTree(
-        dir      : 'build/intermediates/javac/debug/classes/com/example',
-        excludes : excludes
-)
-
-def kotlinClasses = fileTree(
-        dir      : 'build/tmp/kotlin-classes/debug/com/example',
-        excludes : excludes
-)
-
 tasks.withType(Test) {
     jacoco.includeNoLocationClasses = true
 }
@@ -49,7 +20,27 @@ task jacocoTestReport(type : JacocoReport, dependsOn : ['testDebugUnitTest']) {
         html.enabled = true
     }
 
-    classDirectories = files([javaClasses, kotlinClasses])
+    classDirectories = fileTree(
+            dir      : 'build/intermediates/javac/debug/classes/com/example',
+            excludes : [
+                    '**/R.class',
+                    '**/R$*.class',
+                    '**/*$ViewInjector*.*',
+                    '**/*$ViewBinder*.*',
+                    '**/BuildConfig.*',
+                    '**/Manifest*.*',
+                    '**/*RealmProxy.*',
+                    '**/*ColumnInfo.*',
+                    '**/*RealmModule*.*',
+                    '**/AutoValue_*.*',
+                    '**/Dagger*.*',
+                    '**/*Module_Provide*Factory.*',
+                    '**/*_Factory.*',
+                    '**/*_MembersInjector.*',
+                    '**/*_LifecycleAdapter.*',
+                    '**/models/**'
+            ]
+    )
 
     sourceDirectories = files(coverageSourceDirs)
     executionData     = fileTree(
@@ -58,7 +49,7 @@ task jacocoTestReport(type : JacocoReport, dependsOn : ['testDebugUnitTest']) {
     )
 
     doFirst {
-        files([javaClasses, kotlinClasses]).getFiles().each { file ->
+        files('build/intermediates/javac/debug/classes/com/example').getFiles().each { file ->
             if (file.name.contains('$$')) {
                 file.renameTo(file.path.replace('$$', '$'))
             }
@@ -75,7 +66,27 @@ task jacocoTestReportLocal(type : JacocoReport, dependsOn : ['testDebugUnitTest'
         html.enabled = true
     }
 
-    classDirectories = files([javaClasses, kotlinClasses])
+    classDirectories = fileTree(
+            dir      : 'build/intermediates/javac/debug/classes/com/example',
+            excludes : [
+                    '**/R.class',
+                    '**/R$*.class',
+                    '**/*$ViewInjector*.*',
+                    '**/*$ViewBinder*.*',
+                    '**/BuildConfig.*',
+                    '**/Manifest*.*',
+                    '**/*RealmProxy.*',
+                    '**/*ColumnInfo.*',
+                    '**/*RealmModule*.*',
+                    '**/AutoValue_*.*',
+                    '**/Dagger*.*',
+                    '**/*Module_Provide*Factory.*',
+                    '**/*_Factory.*',
+                    '**/*_MembersInjector.*',
+                    '**/*_LifecycleAdapter.*',
+                    '**/models/**'
+            ]
+    )
 
     sourceDirectories = files(coverageSourceDirs)
     executionData     = fileTree(
@@ -84,7 +95,7 @@ task jacocoTestReportLocal(type : JacocoReport, dependsOn : ['testDebugUnitTest'
     )
 
     doFirst {
-        files([javaClasses, kotlinClasses]).getFiles().each { file ->
+        files('build/intermediates/javac/debug/classes/com/example').getFiles().each { file ->
             if (file.name.contains('$$')) {
                 file.renameTo(file.path.replace('$$', '$'))
             }
