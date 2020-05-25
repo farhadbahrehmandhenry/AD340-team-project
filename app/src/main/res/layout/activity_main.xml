@@ -11,6 +11,7 @@
     tools:context=".MainActivity">
 
     <ImageView
+        android:id="@+id/logo"
         android:layout_width="@dimen/size200"
         android:layout_height="@dimen/size200"
         app:srcCompat="@drawable/slumber_dog_v1_black"
@@ -32,17 +33,20 @@
             android:layout_marginStart="@dimen/margin4"/>
 
         <EditText
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/email"
             android:layout_marginTop="@dimen/margin12"/>
 
         <EditText
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/password"/>
 
         <Button
+            android:id="@+id/signinButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/SignUpButton"
@@ -50,29 +54,34 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="200dp"
+        android:layout_width="@dimen/size200"
         android:layout_height="match_parent"
         android:layout_marginBottom="@dimen/margin12"
         android:orientation="vertical"
+        android:gravity="bottom"
         android:layout_gravity="center">
 
-<!--        <TextView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:text="@string/sign_in_to_continue"-->
-<!--            android:layout_gravity="bottom"-->
-<!--            android:gravity="bottom"-->
-<!--            android:layout_marginStart="@dimen/margin4"/>-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/don_t_have_an_account"
+            android:layout_marginStart="@dimen/margin4"
+            android:textAlignment="center"
+            tools:ignore="RtlCompat" />
 
         <TextView
-            android:id="@+id/textViewLink"
-            android:layout_width="wrap_content"
+            android:id="@+id/createAccountButton"
+            android:layout_width="match_parent"
+            android:autoLink="all"
+            android:clickable="true"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:text="dddddd" />
+            android:text="@string/create_account"
+            android:layout_gravity="bottom"
+            android:textAlignment="center"
+            android:gravity="bottom"
+            android:onClick="createAccount"
+            android:layout_marginVertical="8dp"
+            tools:ignore="RtlCompat" />
     </LinearLayout>
 
 
