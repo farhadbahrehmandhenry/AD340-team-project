@@ -34,7 +34,7 @@
                     android:scaleType="centerInside"
                     android:layout_centerHorizontal="true"
                     android:adjustViewBounds="true"
-                    app:srcCompat="@drawable/slumberDog-v1-white"
+                    app:srcCompat="@drawable/slumber_dog_v1_white"
                     android:contentDescription="Logo Image">
                 </ImageView>
 
