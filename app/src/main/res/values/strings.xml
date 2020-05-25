@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AD340-team-project</string>
+    <string name="email_signUp_Info">Email</string>
 </resources>
