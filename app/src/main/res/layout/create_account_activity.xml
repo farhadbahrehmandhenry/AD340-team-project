@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".CreateAccountActivity">
-
-    <RelativeLayout
+ <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         tools:context=".CreateAccountActivity">
 
         <RelativeLayout
@@ -18,27 +13,18 @@
             android:layout_height="wrap_content"
             android:background="@color/gradStart">
 
-            <RelativeLayout
-                android:id="@+id/profileLayout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_centerHorizontal="true">
-
                 <ImageView
                     android:id="@+id/logoImage"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:layout_margin="30dp"
-                    android:padding="15dp"
+                    android:layout_width="@dimen/size200"
+                    android:layout_height="@dimen/size200"
+                    android:layout_margin="@dimen/height30dp"
+                    android:padding="@dimen/height16dp"
                     android:scaleType="centerInside"
                     android:layout_centerHorizontal="true"
                     android:adjustViewBounds="true"
                     app:srcCompat="@drawable/slumber_dog_v1_white"
-                    android:contentDescription="Logo Image">
+                    android:contentDescription="@string/logo_image">
                 </ImageView>
-
-            </RelativeLayout>
 
         </RelativeLayout>
 
@@ -56,11 +42,11 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="@dimen/margingTop25"
+                    android:layout_marginStart="@dimen/marginTop10"
+                    android:layout_marginEnd="@dimen/marginTop10"
                     android:orientation="vertical"
-                    android:layout_margin="30dp"
+                    android:layout_margin="@dimen/height30dp"
                     tools:ignore="UselessParent">
 
                     <LinearLayout
@@ -73,23 +59,24 @@
                             android:id="@+id/createAccountInfoText"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Create Account"
-                            android:textSize="25dp"
+                            android:text="@string/create_account_Text"
+                            android:textSize="@dimen/textSize25"
                             />
 
                         <EditText
                             android:id="@+id/name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:hint="Name"
-                            android:inputType="textPersonName" />
+                            android:hint="@string/hintNameCreateAccount"
+                            android:inputType="textPersonName"
+                            android:autofillHints="@string/app_name" />
 
                         <View
                             android:layout_width="wrap_content"
-                            android:layout_height="1dp"
-                            android:layout_marginTop="10dp"
+                            android:layout_height="@dimen/height1dp"
+                            android:layout_marginTop="@dimen/marginTop10"
                             android:background="@color/gradStart">
-                        </View>grey
+                        </View>
 
                         <EditText
                             android:id="@+id/email"
@@ -97,37 +84,66 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/email_signUp_Info"
                             android:inputType="textEmailAddress"
-                            android:textColor="@color/headings" />
+                            android:textColor="@color/headings"
+                            android:autofillHints="@string/email_signUp_Info" />
                         <View
                             android:layout_width="wrap_content"
-                            android:layout_height="1dp"
-                            android:layout_marginTop="10dp"
+                            android:layout_height="@dimen/height1dp"
+                            android:layout_marginTop="@dimen/marginTop10"
                             android:background="@color/headings"/>
 
-
                         <EditText
-                            android:id="@+id/description"
+                            android:id="@+id/passwordCreateAccount"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:hint="Passwprd"
+                            android:hint="@string/password"
                             android:inputType="textPassword"
                             android:textColor="@color/headings"
-                            android:autofillHints="Passowrd Create Account" />
+                            android:autofillHints="@string/hintPassowrd" />
                         <View
                             android:layout_width="wrap_content"
-                            android:layout_height="1dp"
-                            android:layout_marginTop="10dp"
+                            android:layout_height="@dimen/height1dp"
+                            android:layout_marginTop="@dimen/marginTop10"
                             android:background="@color/headings" >
 
                         </View>
+
                         <Button
-                            android:id="@+id/signUpButton"
+                            android:id="@+id/createAccountButton"
                             android:layout_width="match_parent"
-                            android:layout_height="30dp"
-                            android:layout_marginTop="16dp"
+                            android:layout_height="@dimen/height30dp"
+                            android:layout_marginTop="@dimen/height16dp"
                             android:background="@color/headings"
-                            android:text="CREATE ACCOUNT"
-                            android:textSize="18dp" />
+                            android:text="@string/create_account"
+                            android:textSize="@dimen/textSignInAc" />
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/marginTop80"
+                            android:layout_width="@dimen/size200"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="@dimen/margin12"
+                            android:orientation="vertical"
+                            android:gravity="bottom"
+                            android:layout_gravity="center">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/already_have_account"
+                                android:layout_marginStart="@dimen/margin4"
+                                android:textAlignment="center"
+                                tools:ignore="RtlCompat" />
+
+                            <Button
+                                android:id="@+id/signUpButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/height30dp"
+                                android:layout_marginTop="@dimen/height16dp"
+                                android:background="@color/headings"
+                                android:text="@string/sign_in_crate_accountAct"
+                                android:textSize="@dimen/textSignInAc" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -137,6 +153,4 @@
 
         </RelativeLayout>
 
-    </RelativeLayout>
-
-</ScrollView>
+</RelativeLayout>
