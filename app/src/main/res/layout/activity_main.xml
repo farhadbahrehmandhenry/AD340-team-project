@@ -14,7 +14,7 @@
         android:id="@+id/logo"
         android:layout_width="@dimen/size200"
         android:layout_height="@dimen/size200"
-        app:srcCompat="@drawable/slumber_dog_v1_black"
+        app:srcCompat="@drawable/slumber_dog_v1_white"
         android:layout_marginTop="@dimen/margin24"
         android:layout_gravity="center"/>
 

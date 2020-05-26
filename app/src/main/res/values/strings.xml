@@ -13,4 +13,13 @@
     <string name="hintNameCreateAccount">Name</string>
     <string name="create_account_Text">Create Account</string>
     <string name="logo_image">Logo Image</string>
+    <string name="profile_placeholder">PROFILE</string>
+    <string name="host_placeholder">HOSTS</string>
+    <string name="profile_image">profile_photo</string>
+
+    <!-- FRAGMENTS -->
+    <string name="fragTitlePROFILE">PROFILE</string>
+    <string name="fragTitleHOSTS">MATCHES</string>
+    <string name="fragTitleSETTINGS">SETTINGS</string>
+
 </resources>

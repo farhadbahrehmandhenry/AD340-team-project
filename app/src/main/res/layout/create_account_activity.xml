@@ -65,7 +65,7 @@
 
                         <EditText
                             android:id="@+id/name"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/hintNameCreateAccount"
                             android:inputType="textPersonName"
@@ -80,7 +80,7 @@
 
                         <EditText
                             android:id="@+id/email"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/email_signUp_Info"
                             android:inputType="textEmailAddress"
@@ -94,7 +94,7 @@
 
                         <EditText
                             android:id="@+id/passwordCreateAccount"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/password"
                             android:inputType="textPassword"

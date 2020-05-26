@@ -14,4 +14,5 @@
     <dimen name="height1dp">1dp</dimen>
     <dimen name="textSize25">25sp</dimen>
     <dimen name="margingTop25">25dp</dimen>
+    <dimen name="textSize20">20dp</dimen>
 </resources>
