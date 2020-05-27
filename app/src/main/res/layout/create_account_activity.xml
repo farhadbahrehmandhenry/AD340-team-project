@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateAccountActivity">
  <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -71,12 +78,6 @@
                             android:inputType="textPersonName"
                             android:autofillHints="@string/app_name" />
 
-                        <View
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/height1dp"
-                            android:layout_marginTop="@dimen/marginTop10"
-                            android:background="@color/gradStart">
-                        </View>
 
                         <EditText
                             android:id="@+id/email"
@@ -86,11 +87,6 @@
                             android:inputType="textEmailAddress"
                             android:textColor="@color/headings"
                             android:autofillHints="@string/email_signUp_Info" />
-                        <View
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/height1dp"
-                            android:layout_marginTop="@dimen/marginTop10"
-                            android:background="@color/headings"/>
 
                         <EditText
                             android:id="@+id/passwordCreateAccount"
@@ -100,13 +96,7 @@
                             android:inputType="textPassword"
                             android:textColor="@color/headings"
                             android:autofillHints="@string/hintPassowrd" />
-                        <View
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/height1dp"
-                            android:layout_marginTop="@dimen/marginTop10"
-                            android:background="@color/headings" >
 
-                        </View>
 
                         <Button
                             android:id="@+id/createAccountButton"
@@ -153,4 +143,6 @@
 
         </RelativeLayout>
 
-</RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>
