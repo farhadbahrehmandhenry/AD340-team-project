@@ -18,49 +18,49 @@
             android:contentDescription="@string/profile_image" />
 
         <TextView
-            android:id="@+id/tvOne"
+            android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/marginTop10"
-            android:text="Placeholder"
+            android:text="Name of Dog"
             android:textSize="@dimen/textSize20"
             android:layout_below="@+id/profile_photo" />
 
         <TextView
-            android:id="@+id/tvTwo"
+            android:id="@+id/tv_age"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/marginTop10"
-            android:text="Placeholder"
+            android:text="Age of Dog"
             android:textSize="@dimen/textSize20"
-            android:layout_below="@+id/tvOne" />
+            android:layout_below="@+id/tv_name" />
 
         <TextView
-            android:id="@+id/tvThree"
+            android:id="@+id/tv_bread"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/marginTop10"
-            android:text="Placeholder"
+            android:text="Bread of Dog"
             android:textSize="@dimen/textSize20"
-            android:layout_below="@+id/tvTwo" />
+            android:layout_below="@+id/tv_age" />
 
         <TextView
-            android:id="@+id/tvFour"
+            android:id="@+id/tv_size"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/marginTop10"
-            android:text="Placeholder"
+            android:text="Size of Dog"
             android:textSize="@dimen/textSize20"
-            android:layout_below="@+id/tvThree" />
+            android:layout_below="@+id/tv_bread" />
 
         <TextView
-            android:id="@+id/tvFive"
+            android:id="@+id/tv_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/marginTop10"
-            android:text="Placeholder"
+            android:text="Description of Dog"
             android:textSize="@dimen/textSize20"
-            android:layout_below="@+id/tvFour" />
+            android:layout_below="@+id/tv_size" />
 
     </RelativeLayout>
 
