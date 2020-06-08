@@ -3,11 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/headings"
+    android:background="@color/gradStart"
     tools:context=".MainActivity"
     android:orientation="vertical"
     android:weightSum="150"
     xmlns:android="http://schemas.android.com/apk/res/android">
+
 
     <LinearLayout
         android:id="@+id/secondLayout"
@@ -18,6 +19,26 @@
         android:layout_gravity="center"
         android:layout_weight="4"
         android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/logo_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gradStart">
+
+            <ImageView
+                android:id="@+id/logoImage"
+                android:layout_width="@dimen/size200"
+                android:layout_height="@dimen/size200"
+                android:layout_margin="@dimen/marginTop10"
+                android:padding="@dimen/padding_10"
+                android:scaleType="centerInside"
+                android:layout_centerHorizontal="true"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/slumber_dog_v1_white"
+                android:contentDescription="@string/logo_image">
+            </ImageView>
+
+        </RelativeLayout>
 
         <EditText
             android:id="@+id/email"

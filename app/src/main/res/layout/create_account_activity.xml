@@ -7,10 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".CreateAccountActivity">
  <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
+     android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".CreateAccountActivity">
 
@@ -24,8 +21,8 @@
                     android:id="@+id/logoImage"
                     android:layout_width="@dimen/size200"
                     android:layout_height="@dimen/size200"
-                    android:layout_margin="@dimen/height30dp"
-                    android:padding="@dimen/height16dp"
+                    android:layout_margin="@dimen/marginTop10"
+                    android:padding="@dimen/padding_10"
                     android:scaleType="centerInside"
                     android:layout_centerHorizontal="true"
                     android:adjustViewBounds="true"
@@ -44,16 +41,20 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
                 tools:ignore="UselessParent">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margingTop25"
+                    android:layout_margin="@dimen/height30dp"
                     android:layout_marginStart="@dimen/marginTop10"
+                    android:layout_marginTop="@dimen/margingTop25"
                     android:layout_marginEnd="@dimen/marginTop10"
                     android:orientation="vertical"
-                    android:layout_margin="@dimen/height30dp"
                     tools:ignore="UselessParent">
 
                     <LinearLayout
@@ -67,60 +68,89 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/create_account_Text"
-                            android:textSize="@dimen/textSize25"
-                            />
+                            android:textSize="@dimen/textSize25" />
 
+                        <!--                        <EditText-->
+                        <!--                            android:id="@+id/name"-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:hint="@string/hintNameCreateAccount"-->
+                        <!--                            android:inputType="textPersonName"-->
+                        <!--                            android:autofillHints="@string/app_name" />-->
                         <EditText
-                            android:id="@+id/name"
+                            android:id="@+id/dogName"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/hintNameCreateAccount"
+                            android:hint="@string/your_dog_s_name"
                             android:inputType="textPersonName"
-                            android:autofillHints="@string/app_name" />
-
+                            android:textSize="@dimen/size14" />
 
                         <EditText
                             android:id="@+id/email"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/email_signUp_Info"
+                            android:hint="@string/email"
                             android:inputType="textEmailAddress"
-                            android:textColor="@color/headings"
-                            android:autofillHints="@string/email_signUp_Info" />
+                            android:textSize="@dimen/size14" />
+
+                        <!--                        <EditText-->
+                        <!--                            android:id="@+id/passwordCreateAccount"-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:hint="@string/password"-->
+                        <!--                            android:inputType="textPassword"-->
+                        <!--                            android:textColor="@color/headings"-->
+                        <!--                            android:autofillHints="@string/hintPassowrd" />-->
+                        <EditText
+                            android:id="@+id/dogBreed"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/dog_s_breed"
+                            android:inputType="text"
+                            android:textSize="@dimen/size14" />
+
+                        <TextView
+                            android:id="@+id/dog_age_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Age of Dog"
+                            android:textColor="@color/headings" />
+
+                        <NumberPicker
+                            android:id="@+id/dog_age_value"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp" />
 
                         <EditText
-                            android:id="@+id/passwordCreateAccount"
-                            android:layout_width="match_parent"
+                            android:id="@+id/description"
+                            android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/password"
-                            android:inputType="textPassword"
-                            android:textColor="@color/headings"
-                            android:autofillHints="@string/hintPassowrd" />
-
+                            android:hint="@string/description"
+                            android:inputType="textMultiLine"
+                            android:textSize="@dimen/size14" />
 
                         <Button
-                            android:id="@+id/createAccountButton"
+                            android:id="@+id/login"
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height30dp"
-                            android:layout_marginTop="@dimen/height16dp"
                             android:background="@color/headings"
                             android:text="@string/create_account"
                             android:textSize="@dimen/textSignInAc" />
 
+
                         <LinearLayout
-                            android:layout_marginTop="@dimen/marginTop80"
                             android:layout_width="@dimen/size200"
                             android:layout_height="match_parent"
-                            android:layout_marginBottom="@dimen/margin12"
-                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/textSize20"
                             android:gravity="bottom"
-                            android:layout_gravity="center">
+                            android:orientation="vertical">
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/already_have_account"
                                 android:layout_marginStart="@dimen/margin4"
+                                android:text="@string/already_have_account"
                                 android:textAlignment="center"
                                 tools:ignore="RtlCompat" />
 
@@ -128,10 +158,10 @@
                                 android:id="@+id/signUpButton"
                                 android:layout_width="match_parent"
                                 android:layout_height="@dimen/height30dp"
-                                android:layout_marginTop="@dimen/height16dp"
                                 android:background="@color/headings"
                                 android:text="@string/sign_in_crate_accountAct"
                                 android:textSize="@dimen/textSignInAc" />
+
 
                         </LinearLayout>
 
