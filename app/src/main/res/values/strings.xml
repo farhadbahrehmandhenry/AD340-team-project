@@ -14,10 +14,23 @@
     <string name="profile_placeholder">PROFILE</string>
     <string name="host_placeholder">HOSTS</string>
     <string name="profile_image">profile_photo</string>
+    <string name="required">\ is required\</string>
+    <string name="wrongFormat">\ is in wrong format\</string>
+    <string name="tooYoung">Sorry!! you are too young</string>
+    <string name="tooOld">too old</string>
+    <string name="signup">you are close to sign up!!</string>
 
     <!-- FRAGMENTS -->
     <string name="fragTitlePROFILE">PROFILE</string>
     <string name="fragTitleHOSTS">MATCHES</string>
     <string name="fragTitleSETTINGS">SETTINGS</string>
+    <string name="email">email</string>
+    <string name="you_dog_s_name">you dog\'s name</string>
+    <string name="your_dog_s_age">your dog\'s age</string>
+    <string name="description">description</string>
+    <string name="login">LOGIN</string>
+    <string name="your_dog_s_name">your dog\'s name</string>
+    <string name="dog_s_breed">dog\'s breed</string>
+    <string name="size">size</string>
 
 </resources>

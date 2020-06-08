@@ -15,4 +15,8 @@
     <dimen name="textSize25">25sp</dimen>
     <dimen name="margingTop25">25dp</dimen>
     <dimen name="textSize20">20dp</dimen>
+    <dimen name="margin70">70dp</dimen>
+    <dimen name="size14">14sp</dimen>
+    <dimen name="size12">12sp</dimen>
+    <dimen name="size38">38dp</dimen>
 </resources>
