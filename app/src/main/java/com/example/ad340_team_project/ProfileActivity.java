@@ -1,6 +1,8 @@
 package com.example.ad340_team_project;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -51,7 +53,33 @@ public class ProfileActivity extends AppCompatActivity {
         }).attach();
     }
 
-    public static class Adapter extends FragmentStateAdapter {
+    public String[] getExtraData() {
+        Intent intent = getIntent();
+        Bundle b = intent.getExtras();
+        String[] data = new String[5];
+
+        if (b != null) {
+            if (b.containsKey(Constants.KEY_NAME)) {
+                data[0] = b.getString(Constants.KEY_NAME);
+            }
+            if (b.containsKey(Constants.KEY_AGE)) {
+                data[1] = b.getString(Constants.KEY_AGE);
+            }
+            if (b.containsKey(Constants.KEY_SIZE)) {
+                data[2] = b.getString(Constants.KEY_SIZE);
+            }
+            if (b.containsKey(Constants.KEY_DESCRIPTION)) {
+                data[3] = b.getString(Constants.KEY_DESCRIPTION);
+            }
+            if (b.containsKey(Constants.KEY_BREED)) {
+                data[4] = b.getString(Constants.KEY_BREED);
+            }
+        }
+
+        return data;
+    }
+
+    public class Adapter extends FragmentStateAdapter {
 
         private List<Fragment> fragments = new ArrayList<>();
 
@@ -75,5 +103,4 @@ public class ProfileActivity extends AppCompatActivity {
         }
 
     }
-
 }
