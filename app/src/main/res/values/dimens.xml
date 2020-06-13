@@ -20,4 +20,6 @@
     <dimen name="size12">12sp</dimen>
     <dimen name="size38">38dp</dimen>
     <dimen name="padding_10">10dp</dimen>
+    <dimen name="marg15">15dp</dimen>
+    <dimen name="dim10">10dp</dimen>
 </resources>

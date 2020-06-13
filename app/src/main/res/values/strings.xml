@@ -32,5 +32,11 @@
     <string name="your_dog_s_name">your dog\'s name</string>
     <string name="dog_s_breed">dog\'s breed</string>
     <string name="size">size</string>
+    <string name="login_button">LOGIN</string>
+    <string name="dogName_display">Name:</string>
+    <string name="ageOfDog_display">Age of Dog:</string>
+    <string name="typ_of_bread_Display">Typ of Bread:</string>
+    <string name="dog_size_Display">Dog Size:</string>
+    <string name="description_Display">Description:</string>
 
 </resources>

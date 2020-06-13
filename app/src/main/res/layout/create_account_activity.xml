@@ -1,7 +1,4 @@
-
-
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -68,18 +65,18 @@
 
                         <TextView
                             android:id="@+id/createAccountInfoText"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/create_account_Text"
                             android:textSize="@dimen/textSize25" />
+                        <EditText
+                            android:id="@+id/email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/email"
+                            android:inputType="textEmailAddress"
+                            android:textSize="@dimen/size14" />
 
-                        <!--                        <EditText-->
-                        <!--                            android:id="@+id/name"-->
-                        <!--                            android:layout_width="match_parent"-->
-                        <!--                            android:layout_height="wrap_content"-->
-                        <!--                            android:hint="@string/hintNameCreateAccount"-->
-                        <!--                            android:inputType="textPersonName"-->
-                        <!--                            android:autofillHints="@string/app_name" />-->
                         <EditText
                             android:id="@+id/dogName"
                             android:layout_width="match_parent"
@@ -89,22 +86,6 @@
                             android:textSize="@dimen/size14" />
 
                         <EditText
-                            android:id="@+id/email"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/email"
-                            android:inputType="textEmailAddress"
-                            android:textSize="@dimen/size14" />
-
-                        <!--                        <EditText-->
-                        <!--                            android:id="@+id/passwordCreateAccount"-->
-                        <!--                            android:layout_width="match_parent"-->
-                        <!--                            android:layout_height="wrap_content"-->
-                        <!--                            android:hint="@string/password"-->
-                        <!--                            android:inputType="textPassword"-->
-                        <!--                            android:textColor="@color/headings"-->
-                        <!--                            android:autofillHints="@string/hintPassowrd" />-->
-                        <EditText
                             android:id="@+id/dogBreed"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
@@ -112,17 +93,29 @@
                             android:inputType="text"
                             android:textSize="@dimen/size14" />
 
+
+                        <EditText
+                            android:id="@+id/dogAge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/your_dog_s_age"
+                            android:inputType="number"
+                            android:textSize="@dimen/size14" />
+
                         <TextView
-                            android:id="@+id/dog_age_text"
+                            android:id="@+id/size"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/size"
+                            android:textSize="@dimen/size14" />
+
+                        <Spinner
+                            android:id="@+id/dogSize"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Age of Dog"
-                            android:textColor="@color/headings" />
-
-                        <NumberPicker
-                            android:id="@+id/dog_age_value"
-                            android:layout_width="120dp"
-                            android:layout_height="120dp" />
+                            android:layout_gravity="left"
+                            android:background="@android:drawable/btn_dropdown"
+                            android:spinnerMode="dropdown"/>
 
                         <EditText
                             android:id="@+id/description"
@@ -137,7 +130,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/height30dp"
                             android:background="@color/headings"
-                            android:text="@string/create_account"
+                            android:text="@string/login_button"
                             android:textSize="@dimen/textSignInAc" />
 
 
@@ -148,22 +141,6 @@
                             android:layout_marginTop="@dimen/textSize20"
                             android:gravity="bottom"
                             android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/margin4"
-                                android:text="@string/already_have_account"
-                                android:textAlignment="center"
-                                tools:ignore="RtlCompat" />
-
-                            <Button
-                                android:id="@+id/signUpButton"
-                                android:layout_width="match_parent"
-                                android:layout_height="@dimen/height30dp"
-                                android:background="@color/headings"
-                                android:text="@string/sign_in_crate_accountAct"
-                                android:textSize="@dimen/textSignInAc" />
 
 
                         </LinearLayout>
