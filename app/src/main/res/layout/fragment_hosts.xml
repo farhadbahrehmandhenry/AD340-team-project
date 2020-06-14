@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/card_view"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_gravity="center"
+android:layout_marginBottom="@dimen/md_keylines"
+android:layout_marginLeft="@dimen/md_keylines"
+android:layout_marginRight="@dimen/md_keylines"
+android:foreground="?attr/selectableItemBackground">
+
+<RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/tvHosts"
@@ -12,4 +24,47 @@
         android:text="@string/host_placeholder"
         android:textSize="@dimen/textSize25" />
 
+
+    <ImageView
+        android:id="@+id/card_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/card_image_height"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/match" />
+
+    <TextView
+        android:id="@+id/card_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/card_title_height"
+        android:layout_alignBottom="@+id/card_image"
+        android:layout_marginLeft="@dimen/md_keylines"
+        tools:text="Card title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/cardview_dark_background" />
+
+    <TextView
+        android:id="@+id/card_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_image"
+        android:layout_marginLeft="@dimen/md_keylines"
+        android:layout_marginTop="@dimen/md_keylines"
+        android:layout_marginBottom="@dimen/md_keylines"
+        android:layout_marginRight="@dimen/md_keylines"
+        tools:text="Card text"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="@dimen/size14" />
+
+    <Button
+        android:id="@+id/like_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_text"
+        style="?android:attr/borderlessButtonStyle"
+        android:textColor="?attr/colorPrimary"
+        android:text="@string/match" />
+
 </RelativeLayout>
+</androidx.cardview.widget.CardView>
