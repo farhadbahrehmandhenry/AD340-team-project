@@ -3,11 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/gradStart"
     tools:context=".ProfileActivity">
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim10"
+        android:layout_marginStart="@dimen/dim10"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/marg15"
+        android:background="@color/cardview_light_background"
+        tools:ignore="UselessParent">
 
         <ImageView
             android:id="@+id/profile_photo"
@@ -18,50 +26,103 @@
             android:contentDescription="@string/profile_image" />
 
         <TextView
-            android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/marginTop10"
+            android:layout_marginLeft="@dimen/size14"
+            android:textSize="@dimen/textSize20"
+            android:layout_marginTop="@dimen/marg15"
+            android:text="@string/dogName_display"
+            android:textColor="@color/headings"
+            />
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size14"
             android:text="Name of Dog"
             android:textSize="@dimen/textSize20"
             android:layout_below="@+id/profile_photo" />
 
+
         <TextView
-            android:id="@+id/tv_age"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size14"
+            android:textSize="@dimen/textSize20"
+            android:layout_marginTop="@dimen/marg15"
+            android:text="@string/ageOfDog_display"
+            android:textColor="@color/headings"
+            />
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/marginTop10"
+            android:layout_marginLeft="@dimen/size14"
             android:text="Age of Dog"
             android:textSize="@dimen/textSize20"
             android:layout_below="@+id/tv_name" />
 
         <TextView
-            android:id="@+id/tv_bread"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size14"
+            android:textSize="@dimen/textSize20"
+            android:layout_marginTop="@dimen/marg15"
+            android:text="@string/typ_of_bread_Display"
+            android:textColor="@color/headings"
+            />
+
+        <TextView
+            android:id="@+id/tv_bread"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/marginTop10"
+            android:layout_marginLeft="@dimen/size14"
             android:text="Bread of Dog"
             android:textSize="@dimen/textSize20"
             android:layout_below="@+id/tv_age" />
 
         <TextView
-            android:id="@+id/tv_size"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size14"
+            android:textSize="@dimen/textSize20"
+            android:layout_marginTop="@dimen/marg15"
+            android:text="@string/dog_size_Display"
+            android:textColor="@color/headings"
+            />
+
+        <TextView
+            android:id="@+id/tv_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/marginTop10"
+            android:layout_marginLeft="@dimen/size14"
             android:text="Size of Dog"
             android:textSize="@dimen/textSize20"
             android:layout_below="@+id/tv_bread" />
 
         <TextView
-            android:id="@+id/tv_description"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size14"
+            android:textSize="@dimen/textSize20"
+            android:layout_marginTop="@dimen/marg15"
+            android:text="@string/description_Display"
+            android:textColor="@color/headings"
+            />
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/marginTop10"
             android:text="Description of Dog"
+            android:layout_marginLeft="@dimen/size14"
+
             android:textSize="@dimen/textSize20"
             android:layout_below="@+id/tv_size" />
 
-    </RelativeLayout>
+    </LinearLayout>
 
 </ScrollView>
