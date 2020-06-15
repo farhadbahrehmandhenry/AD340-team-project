@@ -13,4 +13,9 @@ public class Constants {
     static final String KEY_OCCUPATION = "occupation";
     static final String KEY_SIZE = "size";
     static final String KEY_BREED = "breed";
+    static final String KEY_LOCATION = "location";
+    static final String KEY_PRICE = "price";
+    static final String KEY_AVAILABLE = "available";
+    static final String KEY_PICTURE = "picture";
+
 }

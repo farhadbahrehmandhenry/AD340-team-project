@@ -19,6 +19,8 @@
     <string name="tooYoung">Sorry!! you are too young</string>
     <string name="tooOld">too old</string>
     <string name="signup">you are close to sign up!!</string>
+    <string name="select">You Selected This Host!</string>
+
 
     <!-- FRAGMENTS -->
     <string name="fragTitlePROFILE">PROFILE</string>
@@ -39,5 +41,7 @@
     <string name="dog_size_Display">Dog Size:</string>
     <string name="description_Display">Description:</string>
     <string name="match">Match</string>
+    <string name="back">BACK</string>
+    <string name="select_the_host">Select The Host</string>
 
 </resources>
