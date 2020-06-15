@@ -18,8 +18,8 @@ android:foreground="?attr/selectableItemBackground">
 
     <ImageView
         android:id="@+id/card_image"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="@dimen/width120"
+        android:layout_height="@dimen/width120"
         android:layout_alignParentLeft="true"
         android:layout_marginEnd="@dimen/dim10"
         android:scaleType="fitCenter"
@@ -32,7 +32,7 @@ android:foreground="?attr/selectableItemBackground">
         android:layout_toEndOf="@id/card_image"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
         android:textColor="@color/headings"
-        tools:text="Host Name" />
+        tools:text="@string/host_name_placeholder" />
 
     <TextView
         android:id="@+id/host_price"
@@ -45,33 +45,33 @@ android:foreground="?attr/selectableItemBackground">
         android:textColor="@color/cardview_dark_background"
         android:textSize="@dimen/size18"
         android:textStyle="bold"
-        tools:text="Host Price" />
+        tools:text="@string/host_price_placeholder" />
 
     <TextView
         android:id="@+id/host_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/host_price"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="@dimen/margin4"
         android:layout_toEndOf="@id/card_image"
         android:ellipsize="end"
         android:singleLine="true"
         android:textColor="@color/cardview_dark_background"
         android:textSize="@dimen/size14"
-        tools:text="Host Location" />
+        tools:text="@string/host_location_placeholder" />
 
     <TextView
         android:id="@+id/host_available"
-        android:layout_width="120dp"
+        android:layout_width="@dimen/width120"
         android:layout_height="wrap_content"
         android:layout_below="@+id/host_location"
         android:layout_toEndOf="@id/card_image"
         android:ellipsize="end"
         android:singleLine="true"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="@dimen/margin4"
         android:textColor="@color/design_default_color_secondary_variant"
         android:textSize="@dimen/size14"
-        tools:text="Available" />
+        tools:text="@string/available_placeholder" />
 
     <Button
         android:id="@+id/like_btn"
@@ -81,8 +81,8 @@ android:foreground="?attr/selectableItemBackground">
         android:layout_alignTop="@id/host_available"
         android:layout_alignParentEnd="true"
         android:onClick="aaaaa"
-        android:text="View Host"
-        android:padding="10dp"
+        android:text="@string/view_host_title"
+        android:padding="@dimen/padding_10"
         android:background="@color/headings"
         android:textColor="@color/colorWhite" />
 
