@@ -17,6 +17,7 @@ public class ProfileFragment extends Fragment {
     TextView profileSize;
     TextView profileBreed;
     TextView profileDescription;
+    TextView profileEmail;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -29,12 +30,14 @@ public class ProfileFragment extends Fragment {
         profileSize = view.findViewById(R.id.tv_size);
         profileBreed = view.findViewById(R.id.tv_bread);
         profileDescription = view.findViewById(R.id.tv_description);
+        profileEmail = view.findViewById(R.id.tv_email);
 
         profileName.setText(data[0]);
         profileAge.setText(data[1]);
         profileSize.setText(data[2]);
         profileBreed.setText(data[4]);
         profileDescription.setText(data[3]);
+        profileEmail.setText(data[5]);
 
         return view;
     }

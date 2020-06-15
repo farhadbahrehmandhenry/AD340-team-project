@@ -149,7 +149,7 @@
         android:id="@+id/select"
         android:background="@color/headings"
         android:textColor="@color/colorWhite"
-        android:textSize="@dimen/textSize20"
+        android:textSize="@dimen/size18"
         android:text="@string/select_the_host"
         android:layout_alignParentBottom="true"/>
 
