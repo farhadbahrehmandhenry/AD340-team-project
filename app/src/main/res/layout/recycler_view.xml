@@ -8,4 +8,5 @@
     android:paddingBottom="@dimen/md_keylines"
     android:paddingTop="@dimen/md_keylines"
     android:scrollbars="vertical"
+    android:background="@color/colorBrightBlue"
     app:layout_behavior="@string/appbar_scrolling_view_behavior" />

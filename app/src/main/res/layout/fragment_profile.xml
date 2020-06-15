@@ -3,13 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gradStart"
+    android:background="@color/colorWhite"
     tools:context=".ProfileActivity">
 
     <LinearLayout
-
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginTop="@dimen/dim10"
         android:layout_marginStart="@dimen/dim10"
         android:orientation="vertical"
@@ -20,7 +19,7 @@
         <ImageView
             android:id="@+id/profile_photo"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="250dp"
             android:background="@drawable/profile_img"
             android:scaleType="centerCrop"
             android:contentDescription="@string/profile_image" />
@@ -122,6 +121,15 @@
 
             android:textSize="@dimen/textSize20"
             android:layout_below="@+id/tv_size" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height40dp"
+            android:layout_marginTop="@dimen/marginTop10"
+            android:background="@color/headings"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textSize20"
+            android:text="LOG OUT"/>
 
     </LinearLayout>
 
