@@ -15,56 +15,83 @@ android:foreground="?attr/selectableItemBackground">
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tvHosts"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/host_placeholder"
-        android:textSize="@dimen/textSize25" />
-
 
     <ImageView
         android:id="@+id/card_image"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/card_image_height"
-        android:scaleType="centerCrop"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/dim10"
+        android:layout_marginTop="@dimen/dim10"
+        android:scaleType="fitCenter"
         tools:src="@drawable/match" />
 
     <TextView
-        android:id="@+id/card_title"
-        android:layout_width="match_parent"
+        android:id="@+id/host_name"
+        android:layout_width="120dp"
         android:layout_height="@dimen/card_title_height"
-        android:layout_alignBottom="@+id/card_image"
+        android:layout_centerHorizontal="true"
         android:layout_marginLeft="@dimen/md_keylines"
-        tools:text="Card title"
+        android:layout_marginTop="10dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        android:textColor="@color/cardview_dark_background" />
+        android:textColor="@color/gradStart"
+        tools:text="Host Name" />
 
     <TextView
-        android:id="@+id/card_text"
-        android:layout_width="match_parent"
+        android:id="@+id/host_price"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/card_image"
-        android:layout_marginLeft="@dimen/md_keylines"
-        android:layout_marginTop="@dimen/md_keylines"
-        android:layout_marginBottom="@dimen/md_keylines"
-        android:layout_marginRight="@dimen/md_keylines"
-        tools:text="Card text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-82dp"
         android:ellipsize="end"
         android:singleLine="true"
         android:textColor="@color/cardview_dark_background"
-        android:textSize="@dimen/size14" />
+        android:textSize="@dimen/size14"
+        android:textStyle="bold"
+        tools:text="Host Price" />
+
+    <TextView
+        android:id="@+id/host_location"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_image"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-58dp"
+        android:layout_marginEnd="129dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="@dimen/size14"
+        tools:text="Host Location" />
+
+
+    <TextView
+        android:id="@+id/host_available"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_image"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-34dp"
+        android:layout_marginEnd="129dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/design_default_color_secondary_variant"
+        android:textSize="@dimen/size14"
+        tools:text="Host Availablility" />
 
     <Button
         android:id="@+id/like_btn"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/card_text"
-        style="?android:attr/borderlessButtonStyle"
-        android:textColor="?attr/colorPrimary"
-        android:text="@string/match" />
+        android:layout_below="@+id/host_price"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-58dp"
+        android:layout_marginEnd="18dp"
+        android:text="View Host"
+        android:background="@color/design_default_color_secondary"
+        android:textColor="@color/cardview_dark_background" />
 
 </RelativeLayout>
 </androidx.cardview.widget.CardView>
