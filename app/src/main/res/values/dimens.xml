@@ -24,6 +24,7 @@
     <dimen name="size16">16sp</dimen>
     <dimen name="size17">17sp</dimen>
     <dimen name="size18">18sp</dimen>
+    <dimen name="size20">20sp</dimen>
     <dimen name="size25">25sp</dimen>
     <dimen name="size38">38dp</dimen>
     <dimen name="size200">200dp</dimen>

@@ -3,6 +3,7 @@ package com.example.ad340_team_project;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -56,7 +57,7 @@ public class ProfileActivity extends AppCompatActivity {
     public String[] getExtraData() {
         Intent intent = getIntent();
         Bundle b = intent.getExtras();
-        String[] data = new String[5];
+        String[] data = new String[6];
 
         if (b != null) {
             if (b.containsKey(Constants.KEY_NAME)) {
@@ -74,9 +75,16 @@ public class ProfileActivity extends AppCompatActivity {
             if (b.containsKey(Constants.KEY_BREED)) {
                 data[4] = b.getString(Constants.KEY_BREED);
             }
+            if (b.containsKey(Constants.KEY_EMAIL)) {
+                data[5] = b.getString(Constants.KEY_EMAIL);
+            }
         }
 
         return data;
+    }
+
+    public void backToMainActivity(View view) {
+        finish();
     }
 
     public class Adapter extends FragmentStateAdapter {

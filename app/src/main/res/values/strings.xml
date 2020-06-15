@@ -37,7 +37,7 @@
     <string name="login_button">LOGIN</string>
     <string name="dogName_display">Name:</string>
     <string name="ageOfDog_display">Age of Dog:</string>
-    <string name="typ_of_bread_Display">Typ of Bread:</string>
+    <string name="typ_of_bread_Display">Type of Breed:</string>
     <string name="dog_size_Display">Dog Size:</string>
     <string name="description_Display">Description:</string>
     <string name="match">Match</string>
