@@ -63,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
         } else {
             if (fieldName == Constants.KEY_EMAIL && !Patterns.EMAIL_ADDRESS.matcher(field).matches()) {
                 validateEmail(fieldName);
+
+                return false;
             }
             if (fieldName == Constants.KEY_AGE) {
                 int age = Integer.parseInt(field);
@@ -128,8 +130,8 @@ public class MainActivity extends AppCompatActivity {
             bundle.putString(Constants.KEY_EMAIL, emailAddress);
             bundle.putString(Constants.KEY_AGE, age);
             bundle.putString(Constants.KEY_DESCRIPTION, dogDescription);
-            bundle.putString(Constants.KEY_BREED, dogDescription);
-            bundle.putString(Constants.KEY_SIZE, dogDescription);
+            bundle.putString(Constants.KEY_BREED, breed);
+            bundle.putString(Constants.KEY_SIZE, size);
 
 
             intent.putExtras(bundle);

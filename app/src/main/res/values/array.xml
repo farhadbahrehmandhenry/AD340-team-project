@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="host_picture">
+        <item>@drawable/host1_airbnb_capture</item>
+        <item>@drawable/host2_welcome_dog</item>
+        <item>@drawable/host3_julias_outdoorfun</item>
+        <item>@drawable/host4_max_dog_lover</item>
+    </array>
+    <string-array name ='hosts_name'>
+        <item>Nick Rosie</item>
+        <item>Max Mutton</item>
+        <item>Julias Kummer</item>
+        <item>Matt Lumb</item>
+    </string-array>
+    <string-array name="host_price">
+        <item>$45 per night</item>
+        <item>$30 per night</item>
+        <item>$35 per night</item>
+        <item>$50 per night</item>
+    </string-array>
+    <string-array name="host_location">
+        <item>Seattle, WA</item>
+        <item>Seattle, WA</item>
+        <item>Bellevue, WA</item>
+        <item>Kent, WA</item>
+    </string-array>
+    <string-array name="host_available">
+        <item>Host Unavailable</item>
+        <item>Host Available</item>
+        <item>Host Available</item>
+        <item>Hostt Unavailable</item>
+    </string-array>
+</resources>

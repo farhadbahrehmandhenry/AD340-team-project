@@ -1,7 +1,12 @@
 package com.example.ad340_team_project;
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.graphics.drawable.Drawable;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,7 +49,7 @@ public class HostsFragment extends Fragment {
             price = (TextView) itemView.findViewById(R.id.host_price);
             location = (TextView) itemView.findViewById(R.id.host_location);
             available = (TextView) itemView.findViewById(R.id.host_available);
-            select_btn = itemView.findViewById(R.id.like_btn);
+            select_btn = (Button) itemView.findViewById(R.id.like_btn);
             context = itemView.getContext();
         }
     }
@@ -52,7 +57,7 @@ public class HostsFragment extends Fragment {
     /**
      * Adapter to display recycler view.
      */
-    public static class ContentAdapter extends RecyclerView.Adapter<ViewHolder> {
+    public class ContentAdapter extends RecyclerView.Adapter<ViewHolder> {
         // Set numbers of List in RecyclerView.
         private static final int LENGTH = 18;
         private final String[] hNames;
@@ -89,6 +94,20 @@ public class HostsFragment extends Fragment {
                 holder.price.setText(hCosts[position % hCosts.length]);
                 holder.location.setText(hLocations[position % hLocations.length]);
                 holder.available.setText(hAvailablities[position % hAvailablities.length]);
+
+                holder.select_btn.setOnClickListener(view -> {
+                    Intent intent = new Intent(getActivity(), HostActivity.class);
+
+                    Bundle bundle = new Bundle();
+                    bundle.putString(Constants.KEY_NAME, hNames[position % hNames.length]);
+                    bundle.putString(Constants.KEY_LOCATION, hLocations[position % hLocations.length]);
+                    bundle.putString(Constants.KEY_PRICE, hCosts[position % hCosts.length]);
+                    bundle.putString(Constants.KEY_AVAILABLE, hAvailablities[position % hAvailablities.length]);
+                    bundle.putString(Constants.KEY_PICTURE, String.valueOf(hPictures[position % hPictures.length]));
+
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                });
             }
 
             @Override
@@ -96,6 +115,5 @@ public class HostsFragment extends Fragment {
                 return LENGTH;
             }
         }
-
     }
 

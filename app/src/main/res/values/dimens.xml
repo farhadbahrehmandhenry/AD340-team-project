@@ -26,4 +26,5 @@
     <dimen name="card_height">304dp</dimen>
     <dimen name="card_title_height">40dp</dimen>
     <dimen name="dim10">10dp</dimen>
+    <dimen name="margin200">200dp</dimen>
 </resources>

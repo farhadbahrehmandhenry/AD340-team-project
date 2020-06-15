@@ -89,6 +89,7 @@ android:foreground="?attr/selectableItemBackground">
         android:layout_alignParentEnd="true"
         android:layout_marginTop="-58dp"
         android:layout_marginEnd="18dp"
+        android:onClick="aaaaa"
         android:text="View Host"
         android:background="@color/design_default_color_secondary"
         android:textColor="@color/cardview_dark_background" />
