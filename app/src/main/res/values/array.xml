@@ -1,33 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="host_picture">
-        <item>@drawable/host1_airbnb_capture</item>
-        <item>@drawable/host2_welcome_dog</item>
-        <item>@drawable/host3_julias_outdoorfun</item>
-        <item>@drawable/host4_max_dog_lover</item>
+        <item>@drawable/host_one</item>
+        <item>@drawable/host_two</item>
+        <item>@drawable/host_three</item>
+        <item>@drawable/host_four</item>
+        <item>@drawable/host_five</item>
     </array>
     <string-array name ='hosts_name'>
         <item>Nick Rosie</item>
         <item>Max Mutton</item>
         <item>Julias Kummer</item>
         <item>Matt Lumb</item>
+        <item>Julia and Kevin</item>
     </string-array>
     <string-array name="host_price">
         <item>$45 per night</item>
         <item>$30 per night</item>
         <item>$35 per night</item>
         <item>$50 per night</item>
+        <item>$45 per night</item>
     </string-array>
     <string-array name="host_location">
         <item>Seattle, WA</item>
         <item>Seattle, WA</item>
         <item>Bellevue, WA</item>
         <item>Kent, WA</item>
+        <item>Everett, WA</item>
     </string-array>
     <string-array name="host_available">
-        <item>Host Unavailable</item>
-        <item>Host Available</item>
-        <item>Host Available</item>
-        <item>Hostt Unavailable</item>
+        <item>Unavailable</item>
+        <item>Available</item>
+        <item>Available</item>
+        <item>Unavailable</item>
+        <item>Available</item>
     </string-array>
 </resources>

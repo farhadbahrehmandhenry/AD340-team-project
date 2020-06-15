@@ -13,86 +13,79 @@ android:foreground="?attr/selectableItemBackground">
 
 <RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dim10">
 
     <ImageView
         android:id="@+id/card_image"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="@dimen/dim10"
-        android:layout_marginTop="@dimen/dim10"
+        android:layout_marginEnd="@dimen/dim10"
         android:scaleType="fitCenter"
         tools:src="@drawable/match" />
 
     <TextView
         android:id="@+id/host_name"
-        android:layout_width="120dp"
-        android:layout_height="@dimen/card_title_height"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="@dimen/md_keylines"
-        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/card_image"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        android:textColor="@color/gradStart"
+        android:textColor="@color/headings"
         tools:text="Host Name" />
 
     <TextView
         android:id="@+id/host_price"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/card_image"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="-82dp"
+        android:layout_below="@+id/host_name"
+        android:layout_toEndOf="@id/card_image"
         android:ellipsize="end"
-        android:singleLine="true"
+        android:layout_marginTop="2dp"
         android:textColor="@color/cardview_dark_background"
-        android:textSize="@dimen/size14"
+        android:textSize="@dimen/size18"
         android:textStyle="bold"
         tools:text="Host Price" />
 
     <TextView
         android:id="@+id/host_location"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/card_image"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="-58dp"
-        android:layout_marginEnd="129dp"
+        android:layout_below="@+id/host_price"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@id/card_image"
         android:ellipsize="end"
         android:singleLine="true"
         android:textColor="@color/cardview_dark_background"
         android:textSize="@dimen/size14"
         tools:text="Host Location" />
 
-
     <TextView
         android:id="@+id/host_available"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/card_image"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="-34dp"
-        android:layout_marginEnd="129dp"
+        android:layout_below="@+id/host_location"
+        android:layout_toEndOf="@id/card_image"
         android:ellipsize="end"
         android:singleLine="true"
+        android:layout_marginTop="4dp"
         android:textColor="@color/design_default_color_secondary_variant"
         android:textSize="@dimen/size14"
-        tools:text="Host Availablility" />
+        tools:text="Available" />
 
     <Button
         android:id="@+id/like_btn"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/host_price"
+        android:layout_height="@dimen/height40dp"
+        android:layout_alignTop="@id/host_available"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="-58dp"
-        android:layout_marginEnd="18dp"
         android:onClick="aaaaa"
         android:text="View Host"
-        android:background="@color/design_default_color_secondary"
-        android:textColor="@color/cardview_dark_background" />
+        android:padding="10dp"
+        android:background="@color/headings"
+        android:textColor="@color/colorWhite" />
 
-</RelativeLayout>
+    </RelativeLayout>
+
 </androidx.cardview.widget.CardView>

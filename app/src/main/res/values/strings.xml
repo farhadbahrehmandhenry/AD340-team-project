@@ -24,16 +24,16 @@
 
     <!-- FRAGMENTS -->
     <string name="fragTitlePROFILE">PROFILE</string>
-    <string name="fragTitleHOSTS">MATCHES</string>
+    <string name="fragTitleHOSTS">HOST</string>
     <string name="fragTitleSETTINGS">SETTINGS</string>
-    <string name="email">email</string>
-    <string name="you_dog_s_name">you dog\'s name</string>
-    <string name="your_dog_s_age">your dog\'s age</string>
-    <string name="description">description</string>
+    <string name="email">Email</string>
+    <string name="you_dog_s_name">Name of your dog</string>
+    <string name="your_dog_s_age">Age of your dog</string>
+    <string name="description">Description</string>
     <string name="login">LOGIN</string>
-    <string name="your_dog_s_name">your dog\'s name</string>
-    <string name="dog_s_breed">dog\'s breed</string>
-    <string name="size">size</string>
+    <string name="your_dog_s_name">Name of your dog</string>
+    <string name="dog_s_breed">Breed of your dog</string>
+    <string name="size">Size of your dog</string>
     <string name="login_button">LOGIN</string>
     <string name="dogName_display">Name:</string>
     <string name="ageOfDog_display">Age of Dog:</string>
@@ -42,6 +42,10 @@
     <string name="description_Display">Description:</string>
     <string name="match">Match</string>
     <string name="back">BACK</string>
-    <string name="select_the_host">Select The Host</string>
+    <string name="select_the_host">Select Host</string>
+    <string name="Description">Description of the dog can be found here. You can read more about the hosts and their preferred dogs, size, and price.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

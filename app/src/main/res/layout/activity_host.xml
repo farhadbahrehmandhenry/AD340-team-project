@@ -1,49 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/dim10"
     tools:context=".HostActivity"
     android:orientation="vertical">
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/margin200"
+        android:layout_height="300dp"
+        android:background="@drawable/host3_julias_outdoorfun"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="@dimen/dim10"
         android:id="@+id/image"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/name"
+        android:text="John Smith"
+        android:textStyle="bold"
+        android:textSize="@dimen/textSize20"
+        android:textColor="@color/headings"
         android:layout_below="@+id/image"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/price"
-        android:layout_below="@+id/name"/>
+        android:layout_toEndOf="@id/name"
+        android:text="$45 per night"
+        android:gravity="right"
+        android:textSize="@dimen/size18"
+        android:textStyle="bold"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/image"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Seattle, WA"
         android:id="@+id/location"
+        android:layout_marginTop="@dimen/marginTop10"
+        android:textSize="@dimen/size16"
+        android:textStyle="bold"
         android:layout_below="@+id/price"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/available"
-        android:layout_below="@+id/location"/>
-    <Button
+        android:text="Available"
+        android:textColor="@color/SignUpButton"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/price"/>
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_below="@id/location"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/marginTop10"
+        android:background="@color/colorLightGrey" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="select"
-        android:id="@+id/select"
-        android:text="@string/select_the_host"
-        android:layout_below="@+id/available"/>
+        android:id="@+id/descriptionTitle"
+        android:text="Description"
+        android:textSize="@dimen/size16"
+        android:layout_marginTop="@dimen/marginTop10"
+        android:textColor="@color/headings"
+        android:layout_below="@+id/viewLine"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/description"
+        android:text="@string/Description"
+        android:layout_marginTop="@dimen/marginTop10"
+        android:layout_below="@+id/descriptionTitle"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/availableTitle"
+        android:text="Availability"
+        android:textSize="@dimen/size16"
+        android:layout_marginTop="@dimen/marginTop10"
+        android:textColor="@color/headings"
+        android:layout_below="@+id/description"/>
+
+    <TextView
+        android:id="@+id/textDate"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/availableTitle"
+        android:background="@color/colorLightGrey"
+        android:padding="@dimen/padding_10"
+        android:layout_marginEnd="@dimen/dim10"
+        android:layout_marginTop="@dimen/marginTop10"
+        android:layout_marginBottom="@dimen/margin4"
+        android:hint="01/02/2020"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/infoTitle"
+        android:text="Contact information"
+        android:textSize="@dimen/size16"
+        android:layout_marginTop="@dimen/marginTop10"
+        android:textColor="@color/headings"
+        android:layout_below="@+id/textDate"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/phone"
+        android:text="Phone: 206-987-6543"
+        android:layout_marginTop="@dimen/marginTop10"
+        android:layout_below="@+id/infoTitle"/>
+
+    <Button
+        android:id="@+id/btnSelectDate"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height40dp"
+        android:layout_toEndOf="@id/textDate"
+        android:layout_alignParentEnd="true"
+        android:text="Select Date"
+        android:background="@color/headings"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="@dimen/marginTop10"
+        android:layout_below="@+id/availableTitle"/>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="back"
         android:text="@string/back"
-        android:layout_below="@+id/select"/>
+        android:layout_marginTop="@dimen/marginTop10"
+        android:layout_below="@+id/phone"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height40dp"
+        android:onClick="select"
+        android:id="@+id/select"
+        android:background="@color/headings"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/textSize20"
+        android:text="@string/select_the_host"
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>
