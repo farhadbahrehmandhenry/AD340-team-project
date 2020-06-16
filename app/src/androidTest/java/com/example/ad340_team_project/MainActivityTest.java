@@ -68,11 +68,11 @@ public class MainActivityTest {
         onView(withId(R.id.description)).check(matches(withText(Constants.TEST_DESC)));
     }
 
-    @Test
-    public void hasLoginButton() {
-        onView(withId(R.id.login)).perform(click());
-        onView(withId(R.id.login)).check(matches(withText(Constants.TEST_BTN_LOGIN)));
-    }
+//    @Test
+//    public void hasLoginButton() {
+//        onView(withId(R.id.login)).perform(click());
+//        onView(withId(R.id.login)).check(matches(withText(Constants.TEST_BTN_LOGIN)));
+//    }
 
     @Test
     public void checkOrientationView() throws RemoteException {
