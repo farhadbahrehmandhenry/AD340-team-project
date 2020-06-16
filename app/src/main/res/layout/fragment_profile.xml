@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
     android:fillViewport="true"
+    android:paddingBottom="@dimen/dim10"
     tools:context=".ProfileActivity">
 
     <RelativeLayout
@@ -18,7 +19,7 @@
         <ImageView
             android:id="@+id/profile_photo"
             android:layout_width="wrap_content"
-            android:layout_height="250dp"
+            android:layout_height="@dimen/height250"
             android:background="@drawable/profile_img"
             android:scaleType="centerCrop"
             android:contentDescription="@string/profile_image" />
@@ -28,10 +29,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dim10"
-            android:text="Name of Dog"
+            android:text="@string/name_of_dog_placeholder"
             android:layout_marginStart="@dimen/margin4"
             android:layout_marginEnd="@dimen/margin4"
-            android:textSize="@dimen/textSize20"
+            android:textSize="@dimen/size22"
             android:textColor="@color/headings"
             android:textStyle="bold"
             android:layout_below="@+id/profile_photo" />
@@ -52,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/marginTop10"
-            android:text="Seattle, WA"
+            android:text="@string/seattle_wa"
             android:textSize="@dimen/size16"
             android:textStyle="bold"
             android:layout_marginStart="@dimen/margin4"
@@ -66,7 +67,7 @@
             android:id="@+id/viewLine"
             android:layout_below="@id/tv_description"
             android:layout_width="fill_parent"
-            android:layout_height="1dp"
+            android:layout_height="@dimen/height1"
             android:layout_marginTop="@dimen/marginTop10"
             android:background="@color/colorLightGrey" />
 
@@ -76,7 +77,7 @@
             android:layout_height="wrap_content"
             android:textSize="@dimen/size16"
             android:layout_marginTop="@dimen/marg15"
-            android:text="Profile Details:"
+            android:text="@string/profile_details_title"
             android:layout_marginStart="@dimen/margin4"
             android:layout_marginEnd="@dimen/margin4"
             android:textStyle="bold"
@@ -85,7 +86,7 @@
 
         <TextView
             android:id="@+id/ageTitle"
-            android:layout_width="120dp"
+            android:layout_width="@dimen/width120"
             android:layout_height="wrap_content"
             android:textSize="@dimen/size16"
             android:textStyle="bold"
@@ -100,13 +101,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/marginTop10"
             android:textSize="@dimen/size16"
-            android:text="Age of Dog"
+            android:text="@string/age_of_dog_placeholder"
             android:layout_toEndOf="@id/ageTitle"
             android:layout_below="@+id/profileTitle" />
 
         <TextView
             android:id="@+id/tvBreedTitle"
-            android:layout_width="120dp"
+            android:layout_width="@dimen/width120"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin4"
             android:layout_marginTop="@dimen/marginTop10"
@@ -120,14 +121,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/marginTop10"
-            android:text="Bread of Dog:"
+            android:text="@string/bread_of_dog_placeholder"
             android:layout_toEndOf="@id/tvBreedTitle"
             android:textSize="@dimen/size16"
             android:layout_below="@+id/tv_age" />
 
         <TextView
             android:id="@+id/tvDogSizeTitle"
-            android:layout_width="120dp"
+            android:layout_width="@dimen/width120"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/marginTop10"
             android:layout_below="@id/tvBreedTitle"
@@ -141,19 +142,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/marginTop10"
-            android:text="Size of Dog"
+            android:text="@string/size_of_dog_placeholder"
             android:textSize="@dimen/size16"
             android:layout_toEndOf="@id/tvDogSizeTitle"
             android:layout_below="@+id/tvBreedTitle" />
 
         <TextView
             android:id="@+id/tvEmailTitle"
-            android:layout_width="120dp"
+            android:layout_width="@dimen/width120"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin4"
             android:layout_marginTop="@dimen/marginTop10"
             android:layout_below="@id/tv_size"
-            android:text="Email:"
+            android:text="@string/email_placeholder"
             android:textSize="@dimen/size16"
             android:textStyle="bold" />
 
@@ -167,16 +168,23 @@
             android:layout_toEndOf="@id/tvDogSizeTitle"
             android:layout_below="@+id/tvDogSizeTitle" />
 
+        <View
+            android:id="@+id/viewLine2"
+            android:layout_below="@id/tv_email"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/height1"
+            android:layout_marginTop="@dimen/margingTop25"
+            android:layout_marginBottom="@dimen/margin50"
+            android:background="@color/colorLightGrey" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="@dimen/height40dp"
-            android:layout_marginTop="@dimen/margingTop25"
             android:background="@color/headings"
             android:textColor="@color/colorWhite"
             android:textSize="@dimen/size18"
             android:layout_alignParentBottom="true"
-            android:text="LOG OUT"
+            android:text="@string/log_out_title"
             android:onClick="backToMainActivity"/>
 
     </RelativeLayout>

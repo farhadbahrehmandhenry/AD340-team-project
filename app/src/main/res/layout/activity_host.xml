@@ -1,156 +1,189 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:padding="@dimen/dim10"
-    tools:context=".HostActivity"
-    android:orientation="vertical">
+    android:layout_marginBottom="@dimen/dim10"
+    android:fillViewport="true"
+    tools:context=".HostActivity">
 
-    <ImageView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:background="@drawable/host3_julias_outdoorfun"
-        android:scaleType="centerCrop"
-        android:layout_marginBottom="@dimen/dim10"
-        android:id="@+id/image"/>
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/name"
-        android:text="John Smith"
-        android:textStyle="bold"
-        android:textSize="@dimen/textSize20"
-        android:textColor="@color/headings"
-        android:layout_below="@+id/image"/>
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height300"
+            android:layout_marginBottom="@dimen/dim10"
+            android:background="@drawable/host3_julias_outdoorfun"
+            android:scaleType="centerCrop" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/price"
-        android:layout_toEndOf="@id/name"
-        android:text="$45 per night"
-        android:gravity="right"
-        android:textSize="@dimen/size18"
-        android:textStyle="bold"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/image"/>
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image"
+            android:layout_marginStart="@dimen/margin4"
+            android:layout_marginEnd="@dimen/margin4"
+            android:text="@string/host_name_placeholder"
+            android:textColor="@color/headings"
+            android:textSize="@dimen/textSize20"
+            android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Seattle, WA"
-        android:id="@+id/location"
-        android:layout_marginTop="@dimen/marginTop10"
-        android:textSize="@dimen/size16"
-        android:textStyle="bold"
-        android:layout_below="@+id/price"/>
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/margin4"
+            android:layout_marginEnd="@dimen/margin4"
+            android:layout_toEndOf="@id/name"
+            android:gravity="right"
+            android:text="@string/per_night_priceholder"
+            android:textSize="@dimen/size18"
+            android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/available"
-        android:text="Available"
-        android:textColor="@color/SignUpButton"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/price"/>
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/price"
+            android:layout_marginStart="@dimen/margin4"
+            android:layout_marginTop="@dimen/marginTop10"
+            android:layout_marginEnd="@dimen/margin4"
+            android:text="@string/seattle_wa"
+            android:textSize="@dimen/size16"
+            android:textStyle="bold" />
 
-    <View
-        android:id="@+id/viewLine"
-        android:layout_below="@id/location"
-        android:layout_width="fill_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="@dimen/marginTop10"
-        android:background="@color/colorLightGrey" />
+        <TextView
+            android:id="@+id/available"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/price"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/margin4"
+            android:layout_marginEnd="@dimen/margin4"
+            android:text="@string/available_placeholder"
+            android:textColor="@color/SignUpButton" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/descriptionTitle"
-        android:text="Description"
-        android:textSize="@dimen/size16"
-        android:layout_marginTop="@dimen/marginTop10"
-        android:textColor="@color/headings"
-        android:layout_below="@+id/viewLine"/>
+        <View
+            android:id="@+id/viewLine"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/height1"
+            android:layout_below="@id/location"
+            android:layout_marginTop="@dimen/marginTop10"
+            android:background="@color/colorLightGrey" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/description"
-        android:text="@string/Description"
-        android:layout_marginTop="@dimen/marginTop10"
-        android:layout_below="@+id/descriptionTitle"/>
+        <TextView
+            android:id="@+id/descriptionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewLine"
+            android:layout_marginStart="@dimen/margin4"
+            android:layout_marginTop="@dimen/marginTop10"
+            android:layout_marginEnd="@dimen/margin4"
+            android:text="@string/description"
+            android:textColor="@color/headings"
+            android:textSize="@dimen/size16" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/availableTitle"
-        android:text="Availability"
-        android:textSize="@dimen/size16"
-        android:layout_marginTop="@dimen/marginTop10"
-        android:textColor="@color/headings"
-        android:layout_below="@+id/description"/>
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/descriptionTitle"
+            android:layout_marginStart="@dimen/margin4"
+            android:layout_marginTop="@dimen/marginTop10"
+            android:layout_marginEnd="@dimen/margin4"
+            android:text="@string/Description" />
 
-    <TextView
-        android:id="@+id/textDate"
-        android:layout_width="240dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/availableTitle"
-        android:background="@color/colorLightGrey"
-        android:padding="@dimen/padding_10"
-        android:layout_marginEnd="@dimen/dim10"
-        android:layout_marginTop="@dimen/marginTop10"
-        android:layout_marginBottom="@dimen/margin4"
-        android:hint="01/02/2020"/>
+        <TextView
+            android:id="@+id/availableTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/description"
+            android:layout_marginStart="@dimen/margin4"
+            android:layout_marginTop="@dimen/marginTop10"
+            android:layout_marginEnd="@dimen/margin4"
+            android:text="@string/availability_title"
+            android:textColor="@color/headings"
+            android:textSize="@dimen/size16" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/infoTitle"
-        android:text="Contact information"
-        android:textSize="@dimen/size16"
-        android:layout_marginTop="@dimen/marginTop10"
-        android:textColor="@color/headings"
-        android:layout_below="@+id/textDate"/>
+        <TextView
+            android:id="@+id/textDate"
+            android:layout_width="@dimen/width240"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/availableTitle"
+            android:layout_marginStart="@dimen/margin4"
+            android:layout_marginTop="@dimen/marginTop10"
+            android:layout_marginEnd="@dimen/dim10"
+            android:layout_marginBottom="@dimen/margin4"
+            android:background="@color/colorLightGrey"
+            android:hint="@string/_01_02_2020"
+            android:padding="@dimen/padding_10" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/phone"
-        android:text="Phone: 206-987-6543"
-        android:layout_marginTop="@dimen/marginTop10"
-        android:layout_below="@+id/infoTitle"/>
+        <TextView
+            android:id="@+id/infoTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textDate"
+            android:layout_marginStart="@dimen/margin4"
+            android:layout_marginTop="@dimen/marginTop10"
+            android:layout_marginEnd="@dimen/margin4"
+            android:text="@string/contact_information_title"
+            android:textColor="@color/headings"
+            android:textSize="@dimen/size16" />
 
-    <Button
-        android:id="@+id/btnSelectDate"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/height40dp"
-        android:layout_toEndOf="@id/textDate"
-        android:layout_alignParentEnd="true"
-        android:text="Select Date"
-        android:background="@color/headings"
-        android:textColor="@color/colorWhite"
-        android:layout_marginTop="@dimen/marginTop10"
-        android:layout_below="@+id/availableTitle"/>
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/infoTitle"
+            android:layout_marginStart="@dimen/margin4"
+            android:layout_marginTop="@dimen/marginTop10"
+            android:layout_marginEnd="@dimen/margin4"
+            android:text="@string/phone_206_987_6543" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="back"
-        android:text="@string/back"
-        android:layout_marginTop="@dimen/marginTop10"
-        android:layout_below="@+id/phone"/>
+        <Button
+            android:id="@+id/btnSelectDate"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height40dp"
+            android:layout_below="@+id/availableTitle"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/marginTop10"
+            android:layout_marginEnd="@dimen/margin4"
+            android:layout_toEndOf="@id/textDate"
+            android:background="@color/headings"
+            android:text="@string/select_date_btn_title"
+            android:textColor="@color/colorWhite" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/height40dp"
-        android:onClick="select"
-        android:id="@+id/select"
-        android:background="@color/headings"
-        android:textColor="@color/colorWhite"
-        android:textSize="@dimen/size18"
-        android:text="@string/select_the_host"
-        android:layout_alignParentBottom="true"/>
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phone"
+            android:layout_marginStart="@dimen/margin4"
+            android:layout_marginTop="@dimen/marginTop10"
+            android:layout_marginBottom="@dimen/margin50"
+            android:onClick="back"
+            android:text="@string/back" />
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/select"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/margin4"
+            android:layout_marginEnd="@dimen/margin4"
+            android:background="@color/headings"
+            android:onClick="select"
+            android:text="@string/select_the_host"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/size18" />
+
+    </RelativeLayout>
+
+</ScrollView>

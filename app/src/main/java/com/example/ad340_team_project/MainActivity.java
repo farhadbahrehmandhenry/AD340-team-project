@@ -46,11 +46,6 @@ public class MainActivity extends AppCompatActivity {
         dropdown.setAdapter(adapter);
     }
 
-    public void createAccount(View view) {
-        Intent intent = new Intent(this, CreateAccountActivity.class);
-        startActivity(intent);
-    }
-
     public boolean isValid(String field, String fieldName) {
         boolean isValid = false;
 
@@ -132,7 +127,6 @@ public class MainActivity extends AppCompatActivity {
             bundle.putString(Constants.KEY_DESCRIPTION, dogDescription);
             bundle.putString(Constants.KEY_BREED, breed);
             bundle.putString(Constants.KEY_SIZE, size);
-
 
             intent.putExtras(bundle);
 
