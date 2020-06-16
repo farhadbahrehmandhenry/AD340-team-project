@@ -132,10 +132,10 @@ tools:context=".MainActivity">
                             android:id="@+id/dogSize"
                             android:layout_width="wrap_content"
                             android:layout_height="50dp"
-
                             android:layout_weight="1"
                             android:layout_marginTop="@dimen/margin4"
                             android:layout_marginBottom="@dimen/margin4"
+
                             android:background="@android:drawable/btn_dropdown"
                             android:spinnerMode="dropdown"/>
 
@@ -170,9 +170,8 @@ tools:context=".MainActivity">
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/height30dp"
-                        android:text="Jenny Kunte, Jak Ashuraliev, Farhad Bahrehmand"
+                        android:text="@string/jenny_kunte_jak_ashuraliev_farhad_bahrehmand"
                         android:gravity="center"
-
                         android:layout_alignParentBottom="true"
                         android:layout_marginBottom="@dimen/margin24"
                         />

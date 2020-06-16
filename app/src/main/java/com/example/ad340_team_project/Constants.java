@@ -18,4 +18,17 @@ public class Constants {
     static final String KEY_AVAILABLE = "available";
     static final String KEY_PICTURE = "picture";
 
+    // TESTING
+    public static final String TEST_EMAIL = "mypuppy@hotmail.com";
+    public static final String TEST_NAME = "Violet";
+    public static final String TEST_BREED = "Labrador";
+    public static final String TEST_AGE = "1";
+    public static final String TEST_SIZE = "small";
+    public static final String TEST_DESC = "Description of the dog goes here";
+    public static final String TEST_BTN_LOGIN = "LOGIN";
+    public static final String TEST_EMPTY = "";
+    public static final String TEST_DEV_NAMES = "Jenny Kunte, Jak Ashuraliev, Farhad Bahrehmand";
+    public static final String TEST_TOAST_HOST_SELECTED = "You selected this host!";
+
+
 }
